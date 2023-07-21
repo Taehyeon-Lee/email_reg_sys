@@ -1,1 +1,228 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+  Style sheet applies throughout the website
+
+  font-family: Roboto, sans-serif;
+  weight
+  reg 400
+  bold 700
+ */
+
+/* General style*/
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1{
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-weight: 700;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ccc;
+  transition: all .5s ease-in-out;
+}
+
+#container {
+  width: 100%;
+  max-width: 1345px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Style for header section */
+app-header {
+  display: block;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: #000;
+}
+
+app-header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style for footer section */
+app-footer{
+  display: block;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: #000;
+  color: white;
+}
+app-footer h3{
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  display: block;
+}
+app-footer p{
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-weight: 400;
+  display: block;
+}
+
+/* Style for nav section */
+app-nav {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #EEEEEE;
+  color: black;
+}
+app-nav,
+app-nav ul {
+  margin: 0;
+  padding: 0;
+}
+app-nav ul li {
+  display: inline;
+  float: left;
+  margin: 0 5px 0 0;
+}
+app-nav ul li a {
+  font-size: 20px;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+app-nav ul li a:hover {
+  background-color: burlywood;
+  color: white;
+  transition: all .5s ease-in-out;
+}
+
+/* Style for main email system section */
+app-email-system {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 15px;
+  padding: 0;
+  color: black;
+}
+
+
+
+
+
+@media only screen and (max-width: 1345px) {
+  #container{
+    width: auto;
+    margin: 0 3%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+button {
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+input, textarea {
+  border: 2px solid black;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div {
+  padding: 8px;
+}
+
+/*#page-wrap {*/
+/*  background-color: #EEE;*/
+/*  min-height: 100vh;*/
+/*  padding: 0;*/
+/*  width: 100vw;*/
+/*}*/
+
+/*#max-width-column {*/
+/*  background-color: white;*/
+/*  margin: 0 auto;*/
+/*  max-width: 700px;*/
+/*  min-height: 100vh;*/
+/*  padding: 16px;*/
+/*  position: relative;*/
+/*}*/
+
+/*#top-bar {*/
+/*  border-bottom: 2px solid black;*/
+/*}*/
+
+/*#app-heading {*/
+/*  margin-top: 0;*/
+/*}*/
+
+/*#my-listings-button {*/
+/*  position: absolute;*/
+/*  top: 16px;*/
+/*  right: 16px;*/
+/*}*/
+
+/*#content-wrap {*/
+/*  padding: 16px;*/
+/*}*/
+
+/*.content-box {*/
+/*  background-color: #EEE;*/
+/*  border-radius: 8px;*/
+/*  padding: 16px;*/
+/*  position: relative;*/
+/*  margin-bottom: 16px;*/
+/*}*/
+
+/*.buttons-container {*/
+/*  position: absolute;*/
+/*  right: 0px;*/
+/*  bottom: 0px;*/
+/*  padding: 16px;*/
+/*}*/
+
+/*.buttons-container > button {*/
+/*  margin-left: 8px;*/
+/*}*/

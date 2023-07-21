@@ -1,1 +1,36 @@
-<p>email-system works!</p>
+<h2>Welcome to email registration system page!</h2>
+<p>
+  This is an Email System Sender. <br>
+  A webpage that will store a user’s email address to the database and send out a confirmation email containing their
+  name. <br>
+  Tech Stack used: AngularJs, NodeJs, MySql and REST api.
+</p>
+
+<h2>Please Enter Your Information</h2>
+<div class="formContainer">
+  <form>
+    <label class="text" style="margin-top: 20px">First Name</label>
+    <input name="fname" ngmodel="" required="" type="text" ng-reflect-required=""
+           ng-reflect-name="fname" ng-reflect-model="">
+    <br>
+
+    <label class="text">Last Name</label>
+    <input name="lname" ngmodel="" required="" type="text" ng-reflect-required=""
+           ng-reflect-name="lname" ng-reflect-model="" class="ng-untouched ng-pristine ng-invalid">
+    <br>
+
+    <label class="text">Email</label>
+    <input email="" name="email" ngmodel="" required="" type="text" ng-reflect-required=""
+           ng-reflect-email="" ng-reflect-name="email" ng-reflect-model="" class="ng-untouched ng-pristine ng-invalid">
+    <br>
+
+    <button class="sendBtn ripple" ng-click="onSubmit2()" type="submit" value="Submit" disabled="">
+      Send Message
+    </button>
+  </form>
+</div>
+
+
+
+
+
