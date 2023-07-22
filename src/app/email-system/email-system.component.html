@@ -7,28 +7,43 @@
 </p>
 
 <h2>Please Enter Your Information</h2>
-<div class="formContainer">
-  <form>
-    <label class="text" style="margin-top: 20px">First Name</label>
-    <input name="fname" ngmodel="" required="" type="text" ng-reflect-required=""
-           ng-reflect-name="fname" ng-reflect-model="">
-    <br>
+<form (ngSubmit)="submitForm()" #emailForm="ngForm">
+  <!--  First Name -- alert user first name is required-->
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [(ngModel)]="userFirstName" name="userFirstName" required #firstName="ngModel">
+    <div *ngIf="(firstName.dirty || firstName.touched)" class="error-message">
+      <div *ngIf="firstName.errors?.['required']">First Name is required.</div>
+    </div>
+  </div>
 
-    <label class="text">Last Name</label>
-    <input name="lname" ngmodel="" required="" type="text" ng-reflect-required=""
-           ng-reflect-name="lname" ng-reflect-model="" class="ng-untouched ng-pristine ng-invalid">
-    <br>
+  <!--  Last Name --  alert user last name is required-->
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [(ngModel)]="userLastName" name="userLastName" required #lastName="ngModel">
+    <div *ngIf="(firstName.dirty || firstName.touched)" class="error-message">
+      <div *ngIf="firstName.errors?.['required']">Last Name is required.</div>
+    </div>
+  </div>
 
-    <label class="text">Email</label>
-    <input email="" name="email" ngmodel="" required="" type="text" ng-reflect-required=""
-           ng-reflect-email="" ng-reflect-name="email" ng-reflect-model="" class="ng-untouched ng-pristine ng-invalid">
-    <br>
+  <!--  Email -- alert user if invalid email format and email is required -->
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="userEmail" name="userEmail" required email #email="ngModel">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+      <div *ngIf="email.errors?.['required']">Email is required.</div>
+      <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+    </div>
+  </div>
 
-    <button class="registerBtn" (click)="registerEmail()" type="submit" value="Submit" disabled="">
-      Register Email
-    </button>
-  </form>
-</div>
+  <button type="submit" [disabled]="emailForm.invalid">Submit</button>
+</form>
+
+<p *ngIf="confirmation">{{ confirmationMsg }}</p>
+
+
+
+
 
 
 

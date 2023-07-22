@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-// import { Listing } from '../types';
-// import {fakeListings} from "../mock-data";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-email-system',
@@ -9,22 +8,42 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./email-system.component.css']
 })
 export class EmailSystemComponent implements OnInit {
-  // listings: Listing[] = [];
+  userFirstName: string = '';
+  userLastName: string = '';
+  userEmail: string = '';
+  confirmation: boolean = false;
+  confirmationMsg: string = 'Please check your email for confirmation!';
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
+    // private route: ActivatedRoute,
+    // private router: Router,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    // this.listings = fakeListings;
-    // const id = this.route.snapshot.paramMap.get('id');
   }
 
-  registerEmail(): void {
-    alert('Your email has ben registered! Please check your email for confirmation!');
-    // navigate to email-system page
-    // this.router.navigateByUrl('/email-system').then
+  submitForm():void{
+    // Replace with proper backend API URL
+    const apiUrl = 'http://localhost:3000/api/sendConfirmationEmail';
+    const userData = {
+      firstName: this.userFirstName,
+      lastName: this.userLastName,
+      email: this.userEmail
+    };
+
+    // Send POST request to backend API
+    this.http.post(apiUrl, userData).subscribe(
+        (res: any) => {
+          console.log(res);
+          this.confirmationMsg = res.message;
+          this.confirmation = true;
+        },
+        (error: any) => {
+          console.error('Something went wrong!:', error);
+        }
+      );
+
   }
 
 }
