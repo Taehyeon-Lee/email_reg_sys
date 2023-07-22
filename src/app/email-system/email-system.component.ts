@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { Listing } from '../types';
-import {fakeListings} from "../mock-data";
+import {ActivatedRoute, Router} from '@angular/router';
+// import { Listing } from '../types';
+// import {fakeListings} from "../mock-data";
 
 @Component({
   selector: 'app-email-system',
@@ -10,10 +11,20 @@ import {fakeListings} from "../mock-data";
 export class EmailSystemComponent implements OnInit {
   // listings: Listing[] = [];
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     // this.listings = fakeListings;
+    // const id = this.route.snapshot.paramMap.get('id');
+  }
+
+  registerEmail(): void {
+    alert('Your email has ben registered! Please check your email for confirmation!');
+    // navigate to email-system page
+    // this.router.navigateByUrl('/email-system').then
   }
 
 }
