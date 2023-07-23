@@ -1,6 +1,9 @@
 # EmailSystemFullstackApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.<br>
+This is Email Registration System Fullstack App. It is a simple email system that allows users to send and receive emails. It is a fullstack app that uses Angular for the frontend and Node.js for the backend. The backend is connected to a MySQL database.
+Technologies used: Angular, Node.js, Express.js, MySQL, Bootstrap, HTML, CSS, TypeScript, JavaScript.
+Server: https://github.com/Taehyeon-Lee/email_reg_sys_server
 
 ## Development server
 
