@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {EmailSystemComponent} from './email-system/email-system.component';
 
+/**
+ * This file is the routing module for the email system website. It is where we define the routes
+ */
 const routes: Routes = [
-  // now it redirects to the email system component because there is no full home page
-  // and assume that there could be a home page and I am just creating email registration page
+  // {path: '', component:  HomeComponent, pathMatch: 'full'}, // default route
+
+  // Assume only making email system page so make it the default route
   {path: '', redirectTo: '/email', pathMatch: 'full'},
   {path: 'email', component: EmailSystemComponent, pathMatch: 'full'},
 ];

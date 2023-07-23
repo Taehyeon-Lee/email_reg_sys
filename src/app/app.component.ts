@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
 
+/**
+ * This file is the main component for the email system. It is the body content of the webpage.
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
