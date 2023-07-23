@@ -10,10 +10,10 @@
 
 <h2>Please Enter Your Information</h2>
 <!-- All input box handles minor error such as leaving a blank or not putting proper email address format-->
-<form (ngSubmit)="submitForm()" #emailForm="ngForm">
+<form (ngSubmit)="submitForm()" #emailForm="ngForm" class="container">
   <!--  First Name -- alert user first name is required-->
   <div>
-    <label for="firstName">First Name:</label>
+    <label for="firstName">First Name:</label> <br>
     <input type="text" id="firstName" [(ngModel)]="userFirstName" name="userFirstName" required #firstName="ngModel">
     <div *ngIf="(firstName.dirty || firstName.touched)" class="error-message">
       <div *ngIf="firstName.errors?.['required']">First Name is required.</div>
@@ -22,17 +22,17 @@
 
   <!--  Last Name --  alert user last name is required-->
   <div>
-    <label for="lastName">Last Name:</label>
+    <label for="lastName">Last Name:</label> <br>
     <input type="text" id="lastName" [(ngModel)]="userLastName" name="userLastName" required #lastName="ngModel">
-    <div *ngIf="(firstName.dirty || firstName.touched)" class="error-message">
-      <div *ngIf="firstName.errors?.['required']">Last Name is required.</div>
+    <div *ngIf="(lastName.dirty || lastName.touched)" class="error-message">
+      <div *ngIf="lastName.errors?.['required']">Last Name is required.</div>
     </div>
   </div>
 
   <!--  Email -- alert user if invalid email format and email is required -->
   <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="userEmail" name="userEmail" required email #email="ngModel">
+    <label for="email">Email:</label> <br>
+    <input type="email" id="email" [(ngModel)]="userEmail" name="userEmail" width="150px" required email #email="ngModel">
     <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
       <div *ngIf="email.errors?.['required']">Email is required.</div>
       <div *ngIf="email.errors?.['email']">Invalid email format.</div>

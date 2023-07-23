@@ -123,6 +123,23 @@ app-email-system {
   padding: 0;
   color: black;
 }
+app-email-system .container {
+  display: block;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between elements as needed */
+  justify-content: flex-start;
+}
+app-email-system label {
+  margin-right: 7px;
+}
+app-email-system
+input[type="text"],
+input[type="email"] {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 app-email-system button {
   background-color: black;
