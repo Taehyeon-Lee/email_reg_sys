@@ -61,6 +61,7 @@ export class EmailSystemComponent implements OnInit {
       },
       complete: ()=>{
         alert(this.confirmationMsg);
+        location.reload();
       }
     });
 
